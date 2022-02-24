@@ -3,7 +3,7 @@ JXA script to add a macho binary to ~/.zshrc for persistence.
 
 If ~/.zshrc does not exit the script will create one and add the following:
 
-> nohup <path_to_binary> &
+> nohup <path_to_binary> > /dev/null 2>&1&
 
 If ~/.zshrc does already exist, this script will append the above to the bottom of ~/.zshrc.
 
